@@ -1,11 +1,11 @@
 # Site settings
-title: 三叶草国际语
-SEOTitle: 三叶草国际语 - 让沟通更容易
+title: gkgy高坤高宇的孪生世界
+SEOTitle: gkgy孪生兄弟高坤高宇的知识宝库：独家思考、实用软件指南与精选资源分享
 header-img: img/post-bg-desk.jpg
-email: klovien@gmail.com
-description: "中西融合, 即学即会, 从此不再辛苦背单词"
+email: gkgy@qq.com
+description: "探索双胞胎兄弟高坤高宇的孪生世界，这里汇集了他们的独特见解、实用软件教程以及精选资源下载。加入我们，共同发现思考的力量、提高生活效率，并享受优质资源带来的便捷。"
 keyword: "人工语言, 国际语, 世界语, 三叶草国际语, 三叶语"
-url: "https://klovien.github.io"          # your host, for absolute URL
+url: "https://gkgy.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/klovien/klovien.github.io.git" # you code repository
 
@@ -19,11 +19,11 @@ sidebar-avatar: /img/about-HJ.jpg      # use absolute URL, seeing it's used in b
 # SNS settings
 RSS: false
 # weibo_username:     qiubaiying
-# zhihu_username:     qiubaiying
-# github_username:    qiubaiying
+# zhihu_username:     gkgy
+# github_username:    gkgy
 # facebook_username:  baiying.qiu.7
-# jianshu_username:   e71990ada2fd
-# twitter_username:   qiubaiying
+# jianshu_username:   37f98761213d
+# bili_username:   随性人啊
 
 
 
@@ -57,7 +57,7 @@ kramdown:
 
 # 评论系统
 # Disqus（https://disqus.com/）
-# disqus_username: qiubaiying
+# disqus_username: gkgy
 
 # Gitalk
 gitalk:
@@ -74,10 +74,10 @@ gitalk:
 
 # Analytics settings
 # Baidu Analytics
-# ba_track_id: b50bf2b12b5338a1845e33832976fd68
+# ba_track_id: 63239bffcbfa18d79f5e263fd740d2a9
 
 # Google Analytics
-# ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
+# ga_track_id: 'G-BBT5W1D53E'            # Format: UA-xxxxxx-xx
 # ga_domain: auto               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
