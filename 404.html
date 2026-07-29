@@ -1,25 +1,11 @@
 ---
 layout: default
-description: "你来到了没有知识的荒原 🙊"
-header-img: "img/404-bg.jpg"
+title: 页面没有找到
 permalink: /404.html
 ---
-
-
-<!-- Page Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-				<div class="site-heading" id="tag-heading">
-					<h1>404</h1>
-					<span class="subheading">{{ page.description }}</span>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
-
-<script>
-	document.body.classList.add('page-fullscreen');
-</script>
+<section class="not-found content-shell narrow-shell">
+  <p class="eyebrow">404 · LOST COORDINATE</p>
+  <h1>这里暂时没有记录。</h1>
+  <p>你访问的页面可能已经移动，或者地址里多了一个字符。</p>
+  <a class="primary-link" href="{{ '/' | relative_url }}">返回博客首页 <span>→</span></a>
+</section>

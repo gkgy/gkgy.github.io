@@ -1,0 +1,21 @@
+---
+layout: default
+title: 搜索
+permalink: /search/
+nav: search
+---
+<div class="content-shell narrow-shell search-page">
+  <header class="page-header">
+    <p class="eyebrow">SEARCH</p>
+    <h1>搜索文章</h1>
+    <p class="page-description">搜索标题、摘要、标签与正文关键词。</p>
+  </header>
+  <label class="search-box">
+    <span class="sr-only">搜索文章</span>
+    <span aria-hidden="true">⌕</span>
+    <input id="search-input" type="search" aria-label="搜索文章" placeholder="输入关键词，例如：AI、工程、软件" autocomplete="off">
+    <kbd aria-hidden="true">/</kbd>
+  </label>
+  <p id="search-status" class="search-status">输入关键词开始搜索。</p>
+  <div id="search-results" class="search-results" aria-live="polite"></div>
+</div>

@@ -1,16 +1,25 @@
-本项目仅仅是为了前来Fork的朋友保留的，原则上不再更新。本项目示范网站地址为：https://klovien.github.io 。
+# gkgy·孪生日志
 
-三叶草国际语已更名为“格罗比言·全球语”，新的项目地址为：
+这是 [gkgy.github.io](https://gkgy.github.io/) 的内容仓库。博客用于发布 AI、工程现场、软件工具与生活实践记录。
 
-* 中文版：https://gitee.com/globien/globien
-* 英文版：https://github.com/globien/globien.github.io
+## 发布新文章
 
-### 致谢
+1. 在 `_posts` 文件夹新建 Markdown 文件。
+2. 文件名使用 `YYYY-MM-DD-文章标题.md`。
+3. 复制 `drafts/文章模板.md` 的格式并填写正文。
+4. 提交到 `master` 分支。GitHub Pages 会自动更新网站。
 
-1. 这个模板是从这里 [BY](https://github.com/qiubaiying/qiubaiying.github.io) fork 的, 感谢作者BY。 
-2. BY的模板应该是从这个模板 [Hux](https://github.com/Huxpro/huxpro.github.io) fork 的, 也一起感谢一下。
-3. 感谢 Jekyll、Github Pages 和 Bootstrap!
+也可以直接打开博客底部的“发布文章”页面，使用浏览器完成整个过程。
 
-### License
+## 本地预览
 
-遵循 MIT 许可证。有关详细,请参阅 [LICENSE](https://github.com/klovien/klovien.github.io/blob/master/LICENSE)。
+```bash
+bundle install
+bundle exec jekyll serve
+```
+
+然后访问 `http://127.0.0.1:4000`。
+
+## 设计
+
+博客使用 GitHub Pages 原生支持的 Jekyll，保留轻量、长文优先、归档、搜索、标签、深色模式和移动端阅读体验。

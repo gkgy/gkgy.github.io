@@ -1,0 +1,32 @@
+---
+layout: default
+title: 全部文章
+permalink: /posts/
+nav: posts
+---
+<div class="content-shell">
+  <header class="page-header list-header">
+    <p class="eyebrow">ALL NOTES</p>
+    <h1>全部文章</h1>
+    <p class="page-description">按发布时间排列的所有记录。长文章也好，短笔记也好，重要的是留下真实可复用的经验。</p>
+  </header>
+  <div class="post-list">
+    {% for post in site.posts %}
+      {% assign plain = post.content | strip_html | strip_newlines %}
+      {% assign minutes = plain.size | divided_by: 500 | plus: 1 %}
+      <article class="post-card">
+        <a href="{{ post.url | relative_url }}">
+          <div class="post-card-main">
+            <p class="post-card-date">{{ post.date | date: "%Y.%m.%d" }}</p>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 180 }}</p>
+          </div>
+          <div class="post-card-side">
+            <span>{{ minutes }} MIN</span>
+            <b aria-hidden="true">↗</b>
+          </div>
+        </a>
+      </article>
+    {% endfor %}
+  </div>
+</div>

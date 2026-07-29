@@ -1,0 +1,31 @@
+---
+layout: default
+title: 文章归档
+permalink: /archive/
+nav: archive
+---
+<div class="content-shell narrow-shell">
+  <header class="page-header">
+    <p class="eyebrow">ARCHIVE</p>
+    <h1>文章归档</h1>
+    <p class="page-description">时间不是目录，是写作留下的坐标。</p>
+  </header>
+  <div class="archive">
+    {% assign current_year = "" %}
+    {% for post in site.posts %}
+      {% assign year = post.date | date: "%Y" %}
+      {% if year != current_year %}
+        {% unless forloop.first %}</ol></section>{% endunless %}
+        <section class="archive-year">
+          <h2>{{ year }}</h2>
+          <ol>
+        {% assign current_year = year %}
+      {% endif %}
+        <li>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m.%d" }}</time>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+      {% if forloop.last %}</ol></section>{% endif %}
+    {% endfor %}
+  </div>
+</div>
