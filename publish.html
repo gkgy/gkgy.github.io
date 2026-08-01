@@ -4,39 +4,21 @@ title: 发布文章
 permalink: /publish/
 nav: publish
 eyebrow: PUBLISH
-description: "登录 GitHub 后，用浏览器就能发布一篇新文章。"
+description: "在本站登录后，直接写作、修改和发布文章。"
 ---
 
-这是博客的写作入口。你不需要安装写作软件，登录自己的 GitHub 账号后，按下面三步即可发布：
+这是博客的写作入口。点击下面的按钮，在本站登录一次，就可以新建、修改和删除文章，不需要再来回打开 GitHub。
 
-1. 点击下方“新建文章”，进入本站的文章目录。
-2. 文件名使用 `年-月-日-文章标题.md`，例如 `2026-07-30-我的第一篇新文章.md`。
-3. 复制文章模板，写完后点击页面底部绿色的 **Commit changes**。通常一两分钟后，文章就会出现在博客首页。
+<p class="publish-action"><a class="primary-link" href="{{ '/admin/' | relative_url }}">进入博客后台 <span>→</span></a></p>
 
-<p class="publish-action"><a class="primary-link" href="https://github.com/gkgy/gkgy.github.io/new/master/_posts">在 GitHub 新建文章 <span>→</span></a></p>
+进入后台后：
 
-文章开头需要保留这段信息：
+- 点击 **新建文章**，填写标题、日期、标签和正文；
+- 点击 **发布**，文章通常会在一两分钟后出现在首页；
+- 打开已有文章，可以继续编辑或删除。
 
-```yaml
----
-layout: post
-title: "文章标题"
-date: 2026-07-30
-author: gkgy
-tags:
-  - AI
-  - 工具
----
-```
+后台仍然使用你的 GitHub 账号确认身份，但登录和写作都在本站完成。访客即使打开后台，也没有权限修改文章。
 
-然后空一行，从这里开始写正文。支持标题、列表、链接、图片和代码块等 Markdown 格式。
+## 备用入口
 
-## 编辑或删除已经发布的文章
-
-打开要管理的文章，滚动到正文底部，会看到 **站点管理**：
-
-- 点击 **编辑文章** 可以修改正文；
-- 点击红色的 **删除这篇文章** 会进入 GitHub 删除确认页；
-- 在 GitHub 页面确认并点击 **Commit changes** 后，博客通常会在一两分钟内自动更新。
-
-这些按钮不会让访客获得管理权限，只有登录你的 GitHub 账号后才能真正修改或删除。
+如果博客后台临时不可用，仍可从 <a href="https://github.com/gkgy/gkgy.github.io/new/master/_posts">GitHub 备用入口</a>发布文章。

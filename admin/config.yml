@@ -1,0 +1,32 @@
+backend:
+  name: github
+  repo: gkgy/gkgy.github.io
+  branch: master
+  base_url: https://gkgy-blog-auth.g370490076k.workers.dev
+  auth_endpoint: /auth
+
+locale: zh_Hans
+site_url: https://gkgy.github.io
+display_url: https://gkgy.github.io
+logo_url: https://gkgy.github.io/img/logo.jpg
+publish_mode: simple
+media_folder: img/uploads
+public_folder: /img/uploads
+
+collections:
+  - name: posts
+    label: 文章
+    label_singular: 文章
+    folder: _posts
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: 布局, name: layout, widget: hidden, default: post }
+      - { label: 标题, name: title, widget: string }
+      - { label: 发布日期, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: 作者, name: author, widget: hidden, default: gkgy }
+      - { label: 标签, name: tags, widget: list, required: false }
+      - { label: 正文, name: body, widget: markdown }

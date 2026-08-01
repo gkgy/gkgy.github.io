@@ -3,6 +3,7 @@ layout: default
 ---
 {% assign plain = content | strip_html | strip_newlines %}
 {% assign minutes = plain.size | divided_by: 500 | plus: 1 %}
+{% assign cms_slug = page.path | split: '/' | last | remove: '.md' %}
 <article class="post content-shell narrow-shell">
   <header class="post-header">
     <a class="post-back" href="{{ '/posts/' | relative_url }}">← 返回全部文章</a>
@@ -30,8 +31,8 @@ layout: default
     <div class="owner-tools" aria-label="站点管理">
       <p>站点管理 <span>仅登录你的 GitHub 账号后有效</span></p>
       <div>
-        <a href="https://github.com/gkgy/gkgy.github.io/edit/master/{{ page.path }}">编辑文章</a>
-        <a class="delete-link" href="https://github.com/gkgy/gkgy.github.io/delete/master/{{ page.path }}">删除这篇文章</a>
+        <a href="{{ '/admin/#/collections/posts/entries/' | append: cms_slug | relative_url }}">编辑文章</a>
+        <a class="delete-link" href="{{ '/admin/#/collections/posts/entries/' | append: cms_slug | relative_url }}">删除这篇文章</a>
       </div>
     </div>
   </footer>
