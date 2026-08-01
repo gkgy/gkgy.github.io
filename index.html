@@ -1,52 +1,24 @@
 ---
 layout: default
 ---
-<section class="hero content-shell">
-  <div class="hero-copy">
-    <p class="eyebrow">GK / GY · FIELD NOTES</p>
-    <h1>把做过的事，<br><em>写成可复用的答案。</em></h1>
-    <p class="hero-intro">这里记录 AI、工程现场、软件工具与生活实践。不是新闻搬运，而是亲手做过、验证过、愿意留下来的方法。</p>
-    <div class="hero-actions">
-      <a class="primary-link" href="{{ '/posts/' | relative_url }}">开始阅读 <span>→</span></a>
-      <a class="quiet-link" href="{{ '/about/' | relative_url }}">认识这个博客</a>
-    </div>
-  </div>
-  <aside class="hero-index" aria-label="博客主题">
-    <div class="index-lines" aria-hidden="true"><i></i><i></i></div>
-    <p>持续记录</p>
-    <ol>
-      <li><span>AI</span><b>模型、工具与工作流</b></li>
-      <li><span>工程</span><b>现场问题与复盘</b></li>
-      <li><span>软件</span><b>真正可用的方法</b></li>
-      <li><span>生活</span><b>好奇心驱动的实践</b></li>
-    </ol>
-  </aside>
+<section class="home-intro content-shell narrow-shell">
+  <h1>👋 欢迎来到 gkgy·孪生日志</h1>
+  <p>这里记录 AI、工程现场、软件工具与生活实践。我把亲手做过、实际验证过的事情，写成以后还能再用的文字。</p>
+  <a class="home-publish-link" href="{{ '/publish/' | relative_url }}">写一篇新文章 →</a>
 </section>
 
-<section class="latest content-shell">
+<section class="latest content-shell narrow-shell">
   <div class="section-heading">
-    <div>
-      <p class="eyebrow">RECENTLY PUBLISHED</p>
-      <h2>最近发布</h2>
-    </div>
-    <a href="{{ '/archive/' | relative_url }}">查看完整归档 →</a>
+    <h2>文章</h2>
   </div>
-  <div class="post-list">
-    {% for post in site.posts limit:8 %}
+  <div class="home-post-list">
+    {% for post in site.posts %}
       {% assign plain = post.content | strip_html | strip_newlines %}
       {% assign minutes = plain.size | divided_by: 500 | plus: 1 %}
-      <article class="post-card">
-        <a href="{{ post.url | relative_url }}">
-          <div class="post-card-main">
-            <p class="post-card-date">{{ post.date | date: "%Y.%m.%d" }}</p>
-            <h3>{{ post.title }}</h3>
-            <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 150 }}</p>
-          </div>
-          <div class="post-card-side">
-            <span>{{ minutes }} MIN</span>
-            <b aria-hidden="true">↗</b>
-          </div>
-        </a>
+      <article class="home-post">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="home-post-excerpt">{{ post.excerpt | strip_html | normalize_whitespace | truncate: 240 }}</p>
+        <p class="home-post-meta">日期：{{ post.date | date: "%Y 年 %-m 月 %-d 日" }} <span>|</span> 预计阅读：{{ minutes }} 分钟 <span>|</span> 作者：{{ post.author | default: site.author.name }}</p>
       </article>
     {% endfor %}
   </div>
