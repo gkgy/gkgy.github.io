@@ -14,18 +14,10 @@ nav: posts
     {% for post in site.posts %}
       {% assign plain = post.content | strip_html | strip_newlines %}
       {% assign minutes = plain.size | divided_by: 500 | plus: 1 %}
-      <article class="post-card">
-        <a href="{{ post.url | relative_url }}">
-          <div class="post-card-main">
-            <p class="post-card-date">{{ post.date | date: "%Y.%m.%d" }}</p>
-            <h2>{{ post.title }}</h2>
-            <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 180 }}</p>
-          </div>
-          <div class="post-card-side">
-            <span>{{ minutes }} MIN</span>
-            <b aria-hidden="true">↗</b>
-          </div>
-        </a>
+      <article class="home-post">
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p class="home-post-excerpt">{{ post.excerpt | strip_html | normalize_whitespace | truncate: 240 }}</p>
+        <p class="home-post-meta">日期：{{ post.date | date: "%Y 年 %-m 月 %-d 日" }} <span>|</span> 预计阅读：{{ minutes }} 分钟 <span>|</span> 作者：{{ post.author | default: site.author.name }}</p>
       </article>
     {% endfor %}
   </div>
