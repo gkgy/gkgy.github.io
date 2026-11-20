@@ -570,3 +570,8 @@ html[data-theme="dark"] .primary-link { color: #101721; background: var(--ink); 
   .work-entry { grid-template-columns: 1fr; gap: .7rem; padding: 1.5rem 0; }
   .work-meta { display: flex; flex-wrap: wrap; gap: .6rem; }
 }
+.work-shot { margin: 1rem 0; }
+.work-shot a { display: block; cursor: zoom-in; }
+.work-shot img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 7px; }
+.work-shot figcaption { margin-top: .45rem; font-size: .85rem; line-height: 1.55; color: var(--ink-soft); }
+.work-entry > div { min-width: 0; }
