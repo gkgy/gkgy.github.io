@@ -1,0 +1,28 @@
+- name: 随手找
+  meta: Rust · macOS
+  role: 桌面搜索工具
+  body: 有时只记得文件放在哪个项目里，连文件名都想不起来。我用 Rust 做了一个本地搜索窗口，让关键词既能匹配文件名，也能匹配上级目录。按 Option + 空格呼出，按类型缩小范围，选中结果就能在 Finder 里定位。
+  repo: suishou-find
+- name: Macshot Studio
+  meta: macOS · Apple Vision · Whisper
+  role: 开源二次开发
+  body: 录教程时，我常要分别处理人像、声音和字幕。我基于开源 macshot 增加了摄像头人像居中、系统声与麦克风分轨均衡，以及本地 Whisper 中文字幕。整段加速时，字幕和摄像头画面跟着同一条时间线走。
+  repo: macshot-studio
+- name: 日日工作台
+  meta: macOS · Windows
+  role: 多设备个人工具
+  body: 我在几台电脑之间轮换工作，希望昨天存的截图、附件和文字今天换台机器也能继续用。我做了一个按日期整理记录的桌面工作台，接通两台 Mac 和一台 Windows。两端同时编辑同一条记录时，工作台会提示冲突，可以另存一份。
+- name: 供热中心 3D 监控
+  meta: Vue · Three.js · Windows
+  role: 工程监控原型
+  body: 我把供热设备的三维视图、报警和设定值操作放进同一个监控界面，并用模拟网关测试断线、超时和恢复。在 Windows 的 Chrome 和 Edge 上各通过了 10 项浏览器检查。真实 PLC 和厂商系统仍待现场联调。
+- name: Codex 遥控切换器
+  meta: macOS · Codex
+  role: 桌面交互工具
+  body: 离开键盘用无线麦讲需求时，我还想顺手切换对话。我把小米遥控器的左右长按接到一个小程序，用它在最近五条 Codex 对话间前后切换。按键时启动，打开对话就退出；原型已在一台 Mac 上实测。
+  repo: codex-remote-cycle
+- name: 局域网传文件
+  meta: Python · Windows · 手机浏览器
+  role: 跨设备传输工具
+  body: 为了把 iPhone 里的一批照片和视频直接传到 Windows，我做了一个在电脑上运行的文件传输工具。手机扫码后就能批量上传，也能从同一页面下载电脑共享的文件，整个过程都在局域网内完成。
+  repo: lan-transfer-tool

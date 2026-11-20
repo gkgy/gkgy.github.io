@@ -1,0 +1,27 @@
+---
+layout: default
+title: 软件作品
+description: gkgy 的软件项目简历，收录桌面工具、跨设备应用和供热监控原型。
+permalink: /works/
+nav: works
+---
+<div class="content-shell narrow-shell">
+  <header class="page-header">
+    <p class="eyebrow">gkgy · 项目简历</p>
+    <h1>软件作品</h1>
+    <p class="page-description">我做软件，常从手头的一件麻烦事开始。有些工具留在自己的几台电脑上每天用，有些整理成开源项目，也有些还在等一次现场联调。</p>
+  </header>
+  {% for work in site.data.works %}
+  <article class="work-entry">
+    <div class="work-meta">
+      <strong>{{ work.role }}</strong>
+      <span>{{ work.meta }}</span>
+    </div>
+    <div>
+      <h2>{{ work.name }}</h2>
+      <p>{{ work.body }}</p>
+      {% if work.repo %}<a class="home-publish-link" href="https://github.com/gkgy/{{ work.repo }}" aria-label="查看{{ work.name }}的 GitHub 仓库">查看项目 ↗</a>{% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</div>
