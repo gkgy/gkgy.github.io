@@ -12,7 +12,7 @@ nav: works
     <p class="page-description">我做软件，常从手头的一件麻烦事开始。有些工具留在自己的几台电脑上每天用，有些整理成开源项目，也有些还在等一次现场联调。</p>
   </header>
   {% for work in site.data.works %}
-  <article class="work-entry">
+  <article class="work-entry" id="{{ work.id }}">
     <div class="work-meta">
       <strong>{{ work.role }}</strong>
       <span>{{ work.meta }}</span>

@@ -3,10 +3,24 @@ layout: default
 ---
 <section class="home-intro content-shell narrow-shell">
   <h1>👋 欢迎来到 gkgy·孪生日志</h1>
-  <p>这里记录 AI、工程现场、软件工具与生活实践。我把亲手做过、实际验证过的事情，写成以后还能再用的文字。</p>
+  <p>我是随性人啊，这里记录 AI、工程现场、软件工具与生活实践。我把亲手做过、实际验证过的事情，写成以后还能再用的文字。</p>
   <div class="home-links">
-    <a class="home-publish-link" href="{{ '/works/' | relative_url }}">浏览软件作品 →</a>
     <a class="home-publish-link" href="{{ '/publish/' | relative_url }}">写一篇新文章 →</a>
+  </div>
+</section>
+
+<section class="home-works content-shell narrow-shell" aria-labelledby="home-works-title">
+  <div class="section-heading">
+    <h2 id="home-works-title">随性人啊的软件作品</h2>
+  </div>
+  <div class="home-work-grid">
+    {% for work in site.data.works %}
+    <a class="home-work-card" href="{{ '/works/' | relative_url }}#{{ work.id }}">
+      <img src="{{ work.image | relative_url }}" width="{{ work.width }}" height="{{ work.height }}" alt="" decoding="async">
+      <h3>{{ work.name }} <span aria-hidden="true">↗</span></h3>
+      <p>{{ work.summary }}</p>
+    </a>
+    {% endfor %}
   </div>
 </section>
 
